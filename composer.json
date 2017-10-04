@@ -1,0 +1,24 @@
+{
+    "name": "rohithb/no-ajax-server-php",
+    "description": "PHP implementaion for noAjax server",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rohith Bhaskaran",
+            "email": "rohith@linways.com"
+        }
+    ],
+    "autoload" : {
+		"psr-4" : {
+			"noAjax\\" : "src/com/linways"
+		}
+    },
+    "autoload-dev" : {
+		"psr-4" : {
+            "noAjax\\test\\": "test/"
+		}
+	},
+    
+    "require": {}
+}
