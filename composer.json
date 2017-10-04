@@ -11,7 +11,7 @@
     ],
     "autoload" : {
 		"psr-4" : {
-			"noAjax\\" : "src/com/linways"
+			"noAjax\\" : "src/"
 		}
     },
     "autoload-dev" : {

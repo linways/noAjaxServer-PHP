@@ -1,11 +1,6 @@
 <?php
 namespace noAjax\test\helperMethods;
-
-class ArgumentMismatch extends \Exception{
-    public function __construct($message, $code = 0, Exception $previous = null) {
-        parent::__construct($message, $code, $previous);
-    }
-}
+use noAjax\Exception\ArgumentMismatchException;
 
 class NoAjaxClass{
     public static function returnSuccess(){
@@ -26,7 +21,7 @@ class NoAjaxClass{
     
     public static function add3Numbers($n1, $n2, $n3){
         if(!isset($n1) || !isset($n2) || !isset($n3))
-             throw new ArgumentMismatch('3 arguments are required');
+             throw new ArgumentMismatchException('3 arguments are required');
         return $n1 + $n2 + $n3;
     }   
 }

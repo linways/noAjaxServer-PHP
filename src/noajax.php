@@ -1,21 +1,12 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
-
 error_reporting(0);
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
+require_once __DIR__ . '/../vendor/autoload.php';
 
-class MethodNotFoundException extends Exception{
-    public function __construct($message, $code = 0, Exception $previous = null) {
-        parent::__construct($message, $code, $previous);
-    }
-}
-class ClassNotFoundException extends Exception{
-    public function __construct($message, $code = 0, Exception $previous = null) {
-        parent::__construct($message, $code, $previous);
-    }
-}
+use noAjax\Exception\ClassNotFoundException;
+use noAjax\Exception\MethodNotFoundException;
 
 $params = json_decode($_POST['params'],true);
 
